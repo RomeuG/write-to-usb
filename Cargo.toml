@@ -1,5 +1,5 @@
 [package]
-name = "write-to-device"
+name = "write-to-usb"
 version = "0.1.0"
 edition = "2021"
 

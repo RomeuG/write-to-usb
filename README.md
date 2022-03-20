@@ -1,4 +1,4 @@
-# Write To Device
+# write-to-usb
 
 A small program that writes raw bytes to a device. I personally use this to write to a USB
 device by its `vendorid` and `productid` instead of using the device file directly, with
@@ -11,10 +11,10 @@ To run and compile this you need to be in a GNU/Linux system and have access to 
 # Usage
 
 ```
-write-to-device 0.1.0
+write-to-usb 0.1.0
 
 USAGE:
-    write-to-device [OPTIONS] --vendorid <VENDORID> --productid <PRODUCTID> --input <INPUT>
+    write-to-usb [OPTIONS] --vendorid <VENDORID> --productid <PRODUCTID> --input <INPUT>
 
 OPTIONS:
     -b, --bskip <BSKIP>            Number of bytes to skip before writing [default: 131072]

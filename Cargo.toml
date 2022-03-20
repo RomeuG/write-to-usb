@@ -12,3 +12,10 @@ clap = { version = "3.1.0", features = ["derive"] }
 [build-dependencies]
 bindgen = "0.59.2"
 cc = { version = "1.0", features = ["parallel"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

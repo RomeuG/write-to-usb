@@ -9,7 +9,7 @@ fn main() {
     println!("cargo:rustc-link-lib=udev");
 
     println!("cargo:rustc-link-search=.");
-    // println!("cargo:rustc-link-lib=static=foo");
+
     // compile again if changes made to header
     println!("cargo:rerun-if-changed=src/wrapper.h");
 

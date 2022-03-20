@@ -1,8 +1,7 @@
 #include "wrapper.h"
 #include <libudev.h>
 
-struct udev_device*
-get_child(struct udev* udev, struct udev_device* parent, const char* subsystem)
+struct udev_device* get_child(struct udev* udev, struct udev_device* parent, const char* subsystem)
 {
     struct udev_device* child = NULL;
     struct udev_enumerate *enumerate = udev_enumerate_new(udev);
@@ -50,11 +49,7 @@ struct DeviceInfo* get_device_info_by_block_impl(struct udev* udev, const char* 
 
         if (block && scsi_disk && usb) {
             const char* device_path = udev_device_get_devnode(block);
-//             printf("block = %s, usb = %s:%s, scsi = %s\n",
-//                    device_path,
-//                    udev_device_get_sysattr_value(usb, "idVendor"),
-//                    udev_device_get_sysattr_value(usb, "idProduct"),
-//                    udev_device_get_sysattr_value(scsi, "vendor"));
+
             if (strcmp(device_path, device_dev_path) == 0) {
                 device_info = malloc(sizeof(struct DeviceInfo));
                 device_info->block = block;
